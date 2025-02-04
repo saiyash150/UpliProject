@@ -70,6 +70,7 @@ const Counter = () => {
         <div className="count-container">
           <animated.button 
             style={buttonAnimation}
+            className="toggle-button"
             onClick={() => setCount(count + 1)}
           >
             +

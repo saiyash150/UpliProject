@@ -59,7 +59,7 @@ const UserDataForm = () => {
     <animated.div style={{ ...formAnimation, width: "48%", margin: "auto", padding: "20px" }}>
      
       <h2 style={{ textAlign: "center" }}>User Data Form</h2>
-      <animated.form style={inputAnimation} onSubmit={handleSubmit} className="form" style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+      <animated.form onSubmit={handleSubmit} className="form" style={{ ...inputAnimation, display: "flex", flexDirection: "column", gap: "10px" }}>
         <label>Name</label>
         <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" required style={{ padding: "8px", borderRadius: "5px", border: "1px solid #ccc" }} />
         

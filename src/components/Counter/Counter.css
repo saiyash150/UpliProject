@@ -48,3 +48,6 @@ button:hover {
   margin: 0;
   color:red;
 }
+.toggle-button{
+  font-size: larger;
+}

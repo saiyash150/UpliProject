@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./RichTextEditor.css";
@@ -23,7 +23,7 @@ const RichTextEditor = () => {
     localStorage.setItem("richTextContent", content);
   }, [content]);
 
-  const handleChange = (value) => {
+  const handleChange = (value: string) => {
     setContent(value);
   };
 
