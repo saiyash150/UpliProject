@@ -1,0 +1,10 @@
+.text-editor-container{
+    height:50%;
+    width:50%;
+    text-align: center;
+
+}
+.text-editor{
+    height:40vh;
+    width:100%;
+}
