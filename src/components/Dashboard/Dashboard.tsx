@@ -1,9 +1,9 @@
-import  { useState, useEffect } from "react";
+import  { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import "chart.js/auto";
 
 const Dashboard = () => {
-  const [formData, setFormData] = useState(() => {
+  const [formData] = useState(() => {
     const storedData = localStorage.getItem("userData");
     return storedData ? JSON.parse(storedData) : {
       id: "",
@@ -14,10 +14,7 @@ const Dashboard = () => {
     };
   });
 
-  useEffect(() => {
-    const storedData = localStorage.getItem("userData");
-    console.log(storedData);
-  }, [formData]);
+  
 
   const dashboardAnimation = useSpring({
     from: { opacity: 0, transform: 'scale(0.9)' },

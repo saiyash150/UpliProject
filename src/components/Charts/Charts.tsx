@@ -1,9 +1,9 @@
-import  { useState, useEffect } from "react";
+import  { useState } from "react";
 import { Line } from "react-chartjs-2";
 import "chart.js/auto";
 
 const Charts = () => {
-  const [formData, setFormData] = useState(() => {
+  const [formData] = useState(() => {
     const storedData = localStorage.getItem("userData");
     return storedData ? JSON.parse(storedData) : {
       id: "",
@@ -14,10 +14,7 @@ const Charts = () => {
     };
   });
 
-  useEffect(() => {
-    const storedData = localStorage.getItem("userData");
-    console.log(storedData);
-  }, [formData]);
+  
 
   const chartData = {
     labels: ["ID", "Name Length", "Address Length", "Email Length", "Phone Length"],
